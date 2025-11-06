@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Chấm điểm phát âm - Hợp chất vô cơ</title>
+<style>
+  body {
+    background-color: #c5f5b1;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  h2 {
+    color: red;
+    font-weight: bold;
+  }
+  table {
+    border-collapse: collapse;
+    width: 85%;
+    margin: auto;
+    background-color: #f4ffdd;
+    font-size: 20px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    border-radius: 10px;
+  }
+  th, td {
+    border: 2px solid #94cc6b;
+    padding: 10px;
+    text-align: center;
+  }
+  th {
+    background-color: #c9f9a5;
+  }
+
+  /* ✅ Cố định kích thước cho ảnh */
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #eaffc1;
+    transition: background-color 0.2s;
+  }
+  button:hover {
+    background-color: #d6ffad;
+  }
+  .ipa {
+    color: red;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+<h2>LUYỆN PHÁT ÂM HỢP CHẤT</h2>
+
+<table>
+  <tr>
+    <th>Tên hợp chất</th>
+    <th>KHHH</th>
+    <th>Hình minh họa</th>
+    <th>Phiên âm</th>
+    <th>Nghe mẫu</th>
+    <th>Đọc lại</th>
+    <th>Điểm</th>
+  </tr>
+
+  <tr><td>Hydrogen chloride</td><td>HCl</td><td><img src="videos/HCl.jpg"></td>
+      <td class="ipa">/ˈhaɪ.drə.dʒən ˈklɔː.raɪd/</td>
+      <td><button onclick="speak('Hydrogen chloride')">🔊</button></td>
+      <td><button onclick="check('Hydrogen chloride',0)">🎙️</button></td>
+      <td id="score0">-</td></tr>
+
+  <tr><td>Hydrogen fluoride</td><td>HF</td><td><img src="videos/HF.jpg"></td>
+      <td class="ipa">/ˈhaɪ.drə.dʒən ˈflʊə.raɪd/</td>
+      <td><button onclick="speak('Hydrogen fluoride')">🔊</button></td>
+      <td><button onclick="check('Hydrogen fluoride',1)">🎙️</button></td>
+      <td id="score1">-</td></tr>
+
+  <tr><td>Hydrogen sulfide</td><td>H₂S</td><td><img src="videos/H2S.jpg"></td>
+      <td class="ipa">/ˈhaɪ.drə.dʒən ˈsʌl.faɪd/</td>
+      <td><button onclick="speak('Hydrogen sulfide')">🔊</button></td>
+      <td><button onclick="check('Hydrogen sulfide',2)">🎙️</button></td>
+      <td id="score2">-</td></tr>
+
+  <tr><td>Sulfur dioxide</td><td>SO₂</td><td><img src="videos/SO2.jpg"></td>
+      <td class="ipa">/ˈsʌl.fər daɪˈɒk.saɪd/</td>
+      <td><button onclick="speak('Sulfur dioxide')">🔊</button></td>
+      <td><button onclick="check('Sulfur dioxide',3)">🎙️</button></td>
+      <td id="score3">-</td></tr>
+
+  <tr><td>Carbon monoxide</td><td>CO</td><td><img src="videos/CO.jpg"></td>
+      <td class="ipa">/ˈkɑː.bən məˈnɒk.saɪd/</td>
+      <td><button onclick="speak('Carbon monoxide')">🔊</button></td>
+      <td><button onclick="check('Carbon monoxide',4)">🎙️</button></td>
+      <td id="score4">-</td></tr>
+
+  <tr><td>Phosphorus pentoxide</td><td>P₂O₅</td><td><img src="videos/P2O5.jpg"></td>
+      <td class="ipa">/ˈfɒs.fər.əs pentˈɒk.saɪd/</td>
+      <td><button onclick="speak('Phosphorus pentoxide')">🔊</button></td>
+      <td><button onclick="check('Phosphorus pentoxide',5)">🎙️</button></td>
+      <td id="score5">-</td></tr>
+
+  <tr><td>Sodium chloride</td><td>NaCl</td><td><img src="videos/NaCl.jpg"></td>
+      <td class="ipa">/ˈsəʊ.di.əm ˈklɔː.raɪd/</td>
+      <td><button onclick="speak('Sodium chloride')">🔊</button></td>
+      <td><button onclick="check('Sodium chloride',6)">🎙️</button></td>
+      <td id="score6">-</td></tr>
+
+  <tr><td>Sodium fluoride</td><td>NaF</td><td><img src="videos/NaF.jpg"></td>
+      <td class="ipa">/ˈsəʊ.di.əm ˈflʊə.raɪd/</td>
+      <td><button onclick="speak('Sodium fluoride')">🔊</button></td>
+      <td><button onclick="check('Sodium fluoride',7)">🎙️</button></td>
+      <td id="score7">-</td></tr>
+
+  <tr><td>Silver iodide</td><td>AgI</td><td><img src="videos/AgI.jpg"></td>
+      <td class="ipa">/ˈsɪl.vər ˈaɪ.ə.daɪd/</td>
+      <td><button onclick="speak('Silver iodide')">🔊</button></td>
+      <td><button onclick="check('Silver iodide',8)">🎙️</button></td>
+      <td id="score8">-</td></tr>
+
+  <tr><td>Lead(II) sulfide</td><td>PbS</td><td><img src="videos/PbS.jpg"></td>
+      <td class="ipa">/lɛd ˈsʌl.faɪd/</td>
+      <td><button onclick="speak('Lead two sulfide')">🔊</button></td>
+      <td><button onclick="check('Lead two sulfide',9)">🎙️</button></td>
+      <td id="score9">-</td></tr>
+
+  <tr><td>Aluminum carbide</td><td>Al₄C₃</td><td><img src="videos/Al4C3.jpg"></td>
+      <td class="ipa">/əˈluː.mɪ.nəm ˈkɑː.baɪd/</td>
+      <td><button onclick="speak('Aluminum carbide')">🔊</button></td>
+      <td><button onclick="check('Aluminum carbide',10)">🎙️</button></td>
+      <td id="score10">-</td></tr>
+
+  <tr><td>Copper(II) chloride</td><td>CuCl₂</td><td><img src="videos/CuCl2.jpg"></td>
+      <td class="ipa">/ˈkɒp.ər ˈklɔː.raɪd/</td>
+      <td><button onclick="speak('Copper two chloride')">🔊</button></td>
+      <td><button onclick="check('Copper two chloride',11)">🎙️</button></td>
+      <td id="score11">-</td></tr>
+</table>
+
+<script>
+function speak(text) {
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = "en-US";
+  speechSynthesis.speak(utter);
+}
+
+function levenshtein(a, b) {
+  a = a || ""; b = b || "";
+  const m = a.length, n = b.length;
+  const dp = Array.from({length: m + 1}, () => Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      const cost = a[i-1] === b[j-1] ? 0 : 1;
+      dp[i][j] = Math.min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+cost);
+    }
+  }
+  return dp[m][n];
+}
+
+function check(expected, id) {
+  const rec = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+  rec.lang = "en-US";
+  rec.interimResults = false;
+  rec.maxAlternatives = 1;
+  const cell = document.getElementById("score" + id);
+  cell.innerText = "🎤...";
+  cell.style.color = "black";
+  let timeout = setTimeout(() => {
+    try { rec.stop(); } catch(e){}
+    cell.innerText = "0%";
+    cell.style.color = "red";
+  }, 7000);
+  rec.onresult = (e) => {
+    clearTimeout(timeout);
+    const said = e.results[0][0].transcript.toLowerCase().trim();
+    const expectedText = expected.toLowerCase();
+    const normalize = s => s.replace(/[^a-z\s]/g,"").replace(/\s+/g," ").trim();
+    const s1 = normalize(said), s2 = normalize(expectedText);
+    const dist = levenshtein(s1, s2);
+    const maxLen = Math.max(s1.length, s2.length);
+    const sim = maxLen ? (1 - dist/maxLen) : 0;
+    let score = 0;
+    if (sim >= 0.95) score = 100;
+    else if (sim >= 0.75) score = 80;
+    else if (sim >= 0.5) score = 50;
+    else if (sim >= 0.25) score = 25;
+    cell.innerText = Math.round(score) + "%";
+    cell.style.color = score === 100 ? "green" :
+                       score >= 80 ? "orange" :
+                       score >= 50 ? "goldenrod" : "red";
+  };
+  rec.onerror = () => {
+    clearTimeout(timeout);
+    cell.innerText = "0%";
+    cell.style.color = "red";
+  };
+  rec.start();
+}
+</script>
+</body>
+</html>
